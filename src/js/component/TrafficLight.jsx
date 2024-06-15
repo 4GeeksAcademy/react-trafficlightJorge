@@ -22,16 +22,20 @@ const TrafficLight = () => {
     };
 
     return (
-        <div className="traffic-light">
-            {[...colors, ...extraColors].map((lightColor, index) => (
-                <div
-                    key={index}
-                    className={`light ${lightColor} ${color === lightColor ? "active" : ""}`}
-                    onClick={() => handleColorClick(lightColor)}
-                />
-            ))}
-            <button onClick={cycleColors}>Cycle Colors</button>
-            <button onClick={addExtraColor}>Add Purple</button>
+        <div className="traffic-light-container">
+            <div className="traffic-light">
+                {[...colors, ...extraColors].map((lightColor, index) => (
+                    <div
+                        key={index}
+                        className={`light ${lightColor} ${color === lightColor ? "active" : ""}`}
+                        onClick={() => handleColorClick(lightColor)}
+                    />
+                ))}
+            </div>
+            <div className="buttons-container">
+                <button onClick={cycleColors}>Cycle Colors</button>
+                <button onClick={addExtraColor}>Add Purple</button>
+            </div>
         </div>
     );
 };

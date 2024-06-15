@@ -1,10 +1,19 @@
+.traffic-light-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px auto;
+}
+
 .traffic-light {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    margin: 20px auto;
-    width: 100px;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .light {
@@ -31,3 +40,10 @@
 .light.purple.active {
     background-color: purple;
 }
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
