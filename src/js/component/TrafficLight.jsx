@@ -1,12 +1,13 @@
+//1.- Importaciones
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import '/workspaces/react-trafficlightJorge/src/styles/trafficLight.css';
-
+//2.- Defino el componente funcional TrafficLight
 const TrafficLight = () => {
     const [color, setColor] = useState("red");
     const colors = ["red", "yellow", "green"];
     const [extraColors, setExtraColors] = useState([]);
-
+//3.- Defino las funciones manejadoras de cada acción
     const handleColorClick = (selectedColor) => {
         setColor(selectedColor);
     };
@@ -20,7 +21,7 @@ const TrafficLight = () => {
     const addExtraColor = () => {
         setExtraColors([...extraColors, "purple"]);
     };
-
+//4.- Renderización del componente HTML
     return (
         <div className="traffic-light-container">
             <div className="traffic-light">
@@ -39,7 +40,7 @@ const TrafficLight = () => {
         </div>
     );
 };
-
+//5.- Renderización en el DOM
 ReactDOM.render(<TrafficLight />, document.querySelector('#app'));
-
+//6.- Exportación del componente funcional
 export default TrafficLight;
